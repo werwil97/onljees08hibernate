@@ -1,5 +1,6 @@
 package pl.coderslab;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,16 +10,13 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "books")
-public class Book {
+@Table(name = "authors")
+public class Author {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private int rating;
-    private String description;
-    @ManyToOne
-    private Publisher publisher;
-    @ManyToMany
-    private List<Author> author;
+    private String firstName;
+    private String lastName;
+
 }
